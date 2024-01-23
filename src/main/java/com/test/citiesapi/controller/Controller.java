@@ -83,7 +83,8 @@ public class Controller {
                 break;
             case "CONSTANTA":
                 forecastList = forecastListConstanta;
-                break;
+                throw new NoCityException();
+                //break;
             case "BAIA-MARE":
                 forecastList = forecastListBaiaMare;
                 break;
@@ -94,6 +95,6 @@ public class Controller {
                 throw new NoCityException();
         }
 
-        return new Response(forecastList);
+        return new Response(0, 0, "", forecastList);
     }
 }

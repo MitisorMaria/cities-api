@@ -10,5 +10,11 @@ import java.util.List;
 @NoArgsConstructor
 public class Response {
     @Getter
-    private List<Forecast> forecastList;
+    private Integer temperature;
+    @Getter
+    private Integer wind;
+    @Getter
+    private String description;
+    @Getter
+    private List<Forecast> forecast;
 }
